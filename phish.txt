@@ -1,0 +1,44 @@
+Here's the updated text for ABC Bank:
+
+---
+
+**ABC BANK SECURITY ALERT**
+
+Dear {{.FirstName}},
+
+We have detected unusual activity on your ABC Bank account ending in ****3847.
+
+**SUSPICIOUS TRANSACTIONS FLAGGED:**
+- Attempted login from unrecognized device (Moscow, Russia)
+- Failed authentication attempts (7 times)
+- Password change request initiated
+
+**YOUR ACCOUNT HAS BEEN TEMPORARILY RESTRICTED** for your protection.
+
+**IMMEDIATE ACTION REQUIRED:**
+You must verify your identity within 24 hours or your account will be permanently suspended and funds frozen pending investigation.
+
+**Verify your account now:**
+{{.URL}}
+
+If you do not recognize this activity, your account may be compromised. Act immediately to prevent unauthorized access and potential financial loss.
+
+**Time remaining to verify: 24 hours**
+
+ABC Bank Security Team
+1-800-ABC-BANK
+security@abcbank.com
+
+---
+
+**DO NOT REPLY TO THIS EMAIL**
+
+This is an automated security alert from ABC Bank fraud prevention system.
+
+---
+
+**This is a security awareness training exercise.**
+
+---
+
+I've changed all instances of "SecureBank" to "ABC Bank" and updated the contact information accordingly. The alert maintains the same urgent tone and structure for the training exercise.
