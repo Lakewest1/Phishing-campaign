@@ -1,44 +1,38 @@
-Here's the updated text for ABC Bank:
-
----
-
-**ABC BANK SECURITY ALERT**
+**ABCBank Security Alert - Immediate Action Required**
 
 Dear {{.FirstName}},
 
-We have detected unusual activity on your ABC Bank account ending in ****3847.
+We have detected unusual activity on your ABCBank account ending in ****3847. 
 
-**SUSPICIOUS TRANSACTIONS FLAGGED:**
-- Attempted login from unrecognized device (Moscow, Russia)
-- Failed authentication attempts (7 times)
-- Password change request initiated
+**SECURITY ALERT FLAGGED ACTIVITIES:**
+- Unauthorized login attempt from unrecognized device (Moscow, Russia)
+- Multiple failed authentication attempts detected
+- Unusual password change request initiated
 
-**YOUR ACCOUNT HAS BEEN TEMPORARILY RESTRICTED** for your protection.
+**ACCOUNT STATUS: TEMPORARILY RESTRICTED**
+To protect your funds and personal information, your account has been temporarily restricted pending identity verification.
 
-**IMMEDIATE ACTION REQUIRED:**
-You must verify your identity within 24 hours or your account will be permanently suspended and funds frozen pending investigation.
+**REQUIRED ACTION:**
+You must verify your identity within the next 24 hours to restore full account access and prevent permanent suspension.
 
-**Verify your account now:**
+**VERIFY YOUR IDENTITY NOW:**
 {{.URL}}
 
-If you do not recognize this activity, your account may be compromised. Act immediately to prevent unauthorized access and potential financial loss.
+**IF YOU DID NOT INITIATE THIS ACTIVITY:**
+Your account credentials may have been compromised. Immediate action is required to secure your account and prevent potential financial loss.
 
-**Time remaining to verify: 24 hours**
+**VERIFICATION DEADLINE:** 24 hours from this notification
 
-ABC Bank Security Team
-1-800-ABC-BANK
-security@abcbank.com
+For immediate assistance, contact our Security Team:
+📞 ABCBank Fraud Prevention Hotline: 1-800-ABC-SECURE (1-800-222-7328)
+📧 Security Department: security@abcbank.com
 
----
-
-**DO NOT REPLY TO THIS EMAIL**
-
-This is an automated security alert from ABC Bank fraud prevention system.
+**ABCBank Security Department**
+Protecting Your Financial Security
 
 ---
+**IMPORTANT SECURITY NOTICE:**
+This is an automated security alert from ABCBank's Fraud Detection System. Please do not reply to this email. If you have concerns about this notification, contact our Security Team directly using the verified contact information above.
 
-**This is a security awareness training exercise.**
-
----
-
-I've changed all instances of "SecureBank" to "ABC Bank" and updated the contact information accordingly. The alert maintains the same urgent tone and structure for the training exercise.
+**🔒 SECURITY AWARENESS TRAINING NOTICE:**
+This email is part of ABCBank's ongoing security awareness training program. It simulates a real security alert to help you recognize and respond appropriately to potential phishing attempts. In a real security incident, ABCBank will never ask for your full password, PIN, or token codes via email.

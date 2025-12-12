@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABC Bank - Online Banking Login</title>
+    <title>ABC Bank - Security Alert - Account Verification Required</title>
     <style>
+        /* All your existing CSS remains exactly the same */
         * {
             margin: 0;
             padding: 0;
@@ -12,13 +13,13 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #e8f1ff 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
         .training-banner {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
             color: white;
             padding: 5px 12px;
             text-align: center;
@@ -27,13 +28,14 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .header {
-            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
-            color: white;
+            background: white;
+            color: #0056b3;
             padding: 8px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 1px solid #e1e8f0;
         }
         .logo {
             display: flex;
@@ -44,7 +46,7 @@
         .logo-icon {
             width: 26px;
             height: 26px;
-            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
             border-radius: 50%;
             margin-right: 7px;
             display: flex;
@@ -58,7 +60,7 @@
             font-size: 12px;
         }
         .header-links a {
-            color: white;
+            color: #0056b3;
             text-decoration: none;
             margin-left: 15px;
             transition: opacity 0.3s;
@@ -75,25 +77,24 @@
             overflow-y: auto;
         }
         .login-container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: white;
             padding: 20px;
             border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px rgba(0, 86, 179, 0.1);
             width: 100%;
             max-width: 380px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid #e1e8f0;
         }
         .security-alert {
-            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
-            border-left: 4px solid #ff7675;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-left: 4px solid #ff9800;
             padding: 8px;
             margin-bottom: 12px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .security-alert-title {
-            color: #d63031;
+            color: #e65100;
             font-weight: bold;
             margin-bottom: 3px;
             display: flex;
@@ -101,15 +102,12 @@
             font-size: 11px;
         }
         .security-alert-text {
-            color: #d63031;
+            color: #e65100;
             font-size: 10px;
             line-height: 1.4;
         }
         .login-title {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #0056b3;
             font-size: 18px;
             margin-bottom: 4px;
             font-weight: 600;
@@ -126,10 +124,7 @@
         label {
             display: block;
             margin-bottom: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #0056b3;
             font-weight: 500;
             font-size: 11px;
         }
@@ -145,8 +140,8 @@
         input[type="text"]:focus,
         input[type="password"]:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #0056b3;
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
         }
         .password-wrapper {
             position: relative;
@@ -156,7 +151,7 @@
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
             border: none;
             cursor: pointer;
             font-size: 11px;
@@ -187,7 +182,7 @@
         .login-button {
             width: 100%;
             padding: 11px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
             color: white;
             border: none;
             border-radius: 8px;
@@ -195,12 +190,89 @@
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 86, 179, 0.4);
         }
         .login-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 86, 179, 0.6);
         }
+        
+        /* New Features */
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 10px;
+        }
+        .login-options a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .login-options a:hover {
+            text-decoration: underline;
+        }
+        
+        .alternative-login {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        .alt-login-title {
+            font-size: 10px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .alt-login-buttons {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+        .alt-login-btn {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            font-size: 10px;
+            color: #0056b3;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .alt-login-btn:hover {
+            background: #f5f7fa;
+        }
+        
+        .security-features {
+            margin-top: 12px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            font-size: 9px;
+        }
+        .security-feature {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #666;
+        }
+        
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 10px;
+        }
+        .language-selector select {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2px 5px;
+            font-size: 10px;
+            color: #0056b3;
+            background: white;
+        }
+        
         .security-info {
             margin-top: 12px;
             padding-top: 12px;
@@ -210,7 +282,7 @@
         .security-badge {
             display: inline-flex;
             align-items: center;
-            background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
             font-size: 10px;
             font-weight: 500;
@@ -223,16 +295,13 @@
             font-size: 10px;
         }
         .footer-links a {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #0056b3;
             text-decoration: none;
             margin: 0 5px;
             font-weight: 500;
         }
         .footer {
-            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            background: linear-gradient(135deg, #1a365d 0%, #0f1f3d 100%);
             padding: 10px 18px;
             text-align: center;
             color: white;
@@ -243,7 +312,7 @@
             margin: 2px 0;
         }
         .footer a {
-            color: white;
+            color: #90cdf4;
             text-decoration: none;
             margin: 0 5px;
             opacity: 0.9;
@@ -293,84 +362,119 @@
             .login-container {
                 padding: 18px 16px;
             }
+            .security-features {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Updated Training Banner with Email Context -->
     <div class="training-banner">
-        ⚠️ SECURITY AWARENESS TRAINING - This is a simulated phishing exercise for educational purposes ⚠️
+        ⚠️ SECURITY AWARENESS TRAINING - You received a "suspicious activity" email prompting you to this page. This is a simulated phishing exercise for educational purposes. ⚠️
     </div>
     
     <div class="header">
         <div class="logo">
             <div class="logo-icon">🏦</div>
-            ABC Bank
+            ABC Bank Nigeria
         </div>
         <div class="header-links">
             <a href="#">Personal</a>
             <a href="#">Business</a>
             <a href="#">Help</a>
         </div>
+        <div class="language-selector">
+            <select>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
     </div>
     
     <div class="main-container">
         <div class="login-container">
+            <!-- Updated Security Alert to match email urgency -->
             <div class="security-alert">
                 <div class="security-alert-title">
-                    🔒 Security Verification Required
+                    🚨 URGENT: Account Security Verification Required
                 </div>
                 <div class="security-alert-text">
-                    We detected unusual activity on your account. Please verify your identity to prevent account suspension.
+                    We detected suspicious activity on your account. Multiple failed login attempts from unrecognized locations were detected. Immediate verification is required to prevent account restriction.
                 </div>
             </div>
             
-            <h1 class="login-title">Secure Login</h1>
-            <p class="login-subtitle">Enter your credentials to verify your account</p>
+            <h1 class="login-title">Emergency Account Verification</h1>
+            <p class="login-subtitle">Your account has been flagged for suspicious activity. Verify your identity immediately to prevent restriction.</p>
             
             <form action="{{.URL}}" method="POST">
                 <div class="form-group">
-                    <label for="username">Username or Account Number</label>
-                    <input type="text" id="username" name="username" placeholder="Enter username" required autofocus>
+                    <label for="username">Username / Account Number</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your banking ID" required autofocus>
                 </div>
                 
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">Password / PIN</label>
                     <div class="password-wrapper">
-                        <input type="password" id="password" name="password" placeholder="Enter password" required>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
                         <button type="button" class="password-toggle" onclick="togglePassword()" aria-label="Toggle password visibility">
                             <span id="toggleIcon">Show</span>
                         </button>
                     </div>
                 </div>
                 
-                <div class="remember-me">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Remember this device</label>
+                <div class="login-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">This is a secure device</label>
+                    </div>
+                    <a href="#" class="forgot-password">Locked out?</a>
                 </div>
                 
-                <button type="submit" class="login-button">Verify & Sign In</button>
+                
+                
+                <div class="alternative-login">
+                    <div class="alt-login-title">Need immediate assistance?</div>
+                    <div class="alt-login-buttons">
+                        <button type="button" class="alt-login-btn" onclick="callCustomerCare()">📞 Call Security Team</button>
+                        <button type="button" class="alt-login-btn" onclick="visitBranch()">🏦 Visit Branch</button>
+                    </div>
+                </div>
+                
+                <div class="security-features">
+                    <div class="security-feature">⏰ Time Sensitive</div>
+                    <div class="security-feature">🚨 Account Flagged</div>
+                    <div class="security-feature">🔐 Immediate Action Required</div>
+                    <div class="security-feature">📧 Email Alert Triggered</div>
+                </div>
                 
                 <div class="security-info">
                     <div class="security-badge">
-                        🔐 256-bit SSL Encrypted Connection
+                        ⚠️ ACCOUNT VERIFICATION REQUIRED WITHIN 24 HOURS
                     </div>
                 </div>
                 
                 <div class="footer-links">
-                    <a href="#">Forgot Username?</a>
-                    <a href="#">Forgot Password?</a>
-                    <a href="#">Enroll Now</a>
+                    <a href="#">Report Phishing Attempt</a>
+                    <a href="#">Security Tips</a>
+                    <a href="#">Contact Fraud Department</a>
                 </div>
             </form>
         </div>
     </div>
     
     <div class="footer">
-        <p>© 2025 ABC Bank. Member FDIC. Equal Housing Lender.</p>
+        <p>© 2025 ABC Bank Nigeria PLC. RC 123456. Licensed and regulated by the Central Bank of Nigeria (CBN).</p>
         <p>
             <a href="#">Privacy Policy</a> |
             <a href="#">Security Center</a> |
-            <a href="#">Terms of Use</a>
+            <a href="#">Terms of Use</a> |
+            <a href="#">Report Fraud</a>
+        </p>
+        <p>24/7 Security Hotline: 01-700-ABC-BANK (01-700-222-2265) • Email: security@abcbank.ng</p>
+        <p style="font-size: 8px; margin-top: 5px; color: #ccc;">
+            This is a security awareness training exercise. This simulated phishing page is for educational purposes only.
         </p>
     </div>
     
@@ -387,6 +491,77 @@
                 toggleIcon.textContent = 'Show';
             }
         }
+        
+        function showTokenLogin() {
+            alert("Token authentication selected. Please enter your token code from your hardware token device or mobile app.");
+        }
+        
+        function showMobileLogin() {
+            alert("Redirecting to Mobile Banking app. Please ensure you have our ABC Mobile Banking app installed.");
+        }
+        
+        function showUSSD() {
+            alert("For USSD Banking, dial *894# from your registered mobile number.");
+        }
+        
+        function callCustomerCare() {
+            alert("Calling ABC Bank Security Team...\nEmergency Hotline: 01-700-222-2265\nPlease have your account number ready for verification.");
+        }
+        
+        function visitBranch() {
+            alert("Locate your nearest ABC Bank branch for immediate assistance. Visit our website for branch locator.");
+        }
+        
+        // Countdown timer for urgency
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set countdown to 24 hours from now
+            const countdownElement = document.createElement('div');
+            countdownElement.className = 'security-alert';
+            countdownElement.style.marginTop = '10px';
+            countdownElement.innerHTML = `
+                <div class="security-alert-title" style="color: #dc3545;">
+                    ⏰ ACCOUNT VERIFICATION DEADLINE
+                </div>
+                <div class="security-alert-text" style="color: #dc3545;">
+                    Time remaining to verify: <span id="countdown" style="font-weight: bold;">23:59:59</span>
+                </div>
+            `;
+            
+            document.querySelector('.security-info').parentNode.insertBefore(countdownElement, document.querySelector('.security-info'));
+            
+            // Countdown timer
+            let timeLeft = 24 * 60 * 60; // 24 hours in seconds
+            
+            function updateCountdown() {
+                const hours = Math.floor(timeLeft / 3600);
+                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const seconds = timeLeft % 60;
+                
+                document.getElementById('countdown').textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    setTimeout(updateCountdown, 1000);
+                } else {
+                    document.getElementById('countdown').textContent = "TIME EXPIRED";
+                    document.getElementById('countdown').style.color = "#dc3545";
+                }
+            }
+            
+            updateCountdown();
+            
+            // Show last login info
+            const lastLogin = new Date();
+            const options = { hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Lagos' };
+            const timeString = lastLogin.toLocaleTimeString('en-US', options);
+            
+            // Update last login time in the alert
+            const alertTitle = document.querySelector('.security-alert-title');
+            if (alertTitle.textContent.includes("Last Login")) {
+                alertTitle.innerHTML = `🔐 Security Alert: Last Login ${timeString}, Lagos`;
+            }
+        });
     </script>
 </body>
 </html>
