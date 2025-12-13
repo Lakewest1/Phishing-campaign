@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABC Bank - Security Alert - Account Verification Required</title>
+    <title>ABC Bank - Secure Online Banking Login</title>
     <style>
-        /* All your existing CSS remains exactly the same */
         * {
             margin: 0;
             padding: 0;
@@ -369,9 +368,8 @@
     </style>
 </head>
 <body>
-    <!-- Updated Training Banner with Email Context -->
     <div class="training-banner">
-        ⚠️ SECURITY AWARENESS TRAINING - You received a "suspicious activity" email prompting you to this page. This is a simulated phishing exercise for educational purposes. ⚠️
+        ⚠️ SECURITY AWARENESS TRAINING - This is a simulated login page for security education purposes only ⚠️
     </div>
     
     <div class="header">
@@ -395,23 +393,22 @@
     
     <div class="main-container">
         <div class="login-container">
-            <!-- Updated Security Alert to match email urgency -->
             <div class="security-alert">
                 <div class="security-alert-title">
-                    🚨 URGENT: Account Security Verification Required
+                    🔐 Security Alert: Last Login 12:45 PM, Lagos
                 </div>
                 <div class="security-alert-text">
-                    We detected suspicious activity on your account. Multiple failed login attempts from unrecognized locations were detected. Immediate verification is required to prevent account restriction.
+                    Ensure you're logging in to the official ABC Bank website. Never share your token or OTP with anyone.
                 </div>
             </div>
             
-            <h1 class="login-title">Emergency Account Verification</h1>
-            <p class="login-subtitle">Your account has been flagged for suspicious activity. Verify your identity immediately to prevent restriction.</p>
+            <h1 class="login-title">Secure Online Banking</h1>
+            <p class="login-subtitle">Enter your credentials to access your accounts</p>
             
-            <form action="{{.URL}}" method="POST">
+            <form action="#" method="POST">
                 <div class="form-group">
-                    <label for="username">Username / Account Number</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your banking ID" required autofocus>
+                    <label for="username">Username / Account Number / Email</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your login ID" required autofocus>
                 </div>
                 
                 <div class="form-group">
@@ -427,38 +424,39 @@
                 <div class="login-options">
                     <div class="remember-me">
                         <input type="checkbox" id="remember">
-                        <label for="remember">This is a secure device</label>
+                        <label for="remember">Remember me</label>
                     </div>
-                    <a href="#" class="forgot-password">Locked out?</a>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
                 </div>
                 
-                
+                <button type="submit" class="login-button">Login to Internet Banking</button>
                 
                 <div class="alternative-login">
-                    <div class="alt-login-title">Need immediate assistance?</div>
+                    <div class="alt-login-title">Or login using:</div>
                     <div class="alt-login-buttons">
-                        <button type="button" class="alt-login-btn" onclick="callCustomerCare()">📞 Call Security Team</button>
-                        <button type="button" class="alt-login-btn" onclick="visitBranch()">🏦 Visit Branch</button>
+                        <button type="button" class="alt-login-btn" onclick="showTokenLogin()">🔑 Token</button>
+                        <button type="button" class="alt-login-btn" onclick="showMobileLogin()">📱 Mobile Banking</button>
+                        <button type="button" class="alt-login-btn" onclick="showUSSD()">📞 *894#</button>
                     </div>
                 </div>
                 
                 <div class="security-features">
-                    <div class="security-feature">⏰ Time Sensitive</div>
-                    <div class="security-feature">🚨 Account Flagged</div>
-                    <div class="security-feature">🔐 Immediate Action Required</div>
-                    <div class="security-feature">📧 Email Alert Triggered</div>
+                    <div class="security-feature">✅ 2FA Enabled</div>
+                    <div class="security-feature">🔒 SSL Secured</div>
+                    <div class="security-feature">👁️ Last Login Tracking</div>
+                    <div class="security-feature">📧 Email Alerts</div>
                 </div>
                 
                 <div class="security-info">
                     <div class="security-badge">
-                        ⚠️ ACCOUNT VERIFICATION REQUIRED WITHIN 24 HOURS
+                        🏦 NDIC Insured • CBN Licensed
                     </div>
                 </div>
                 
                 <div class="footer-links">
-                    <a href="#">Report Phishing Attempt</a>
+                    <a href="#">First Time User?</a>
+                    <a href="#">Corporate Login</a>
                     <a href="#">Security Tips</a>
-                    <a href="#">Contact Fraud Department</a>
                 </div>
             </form>
         </div>
@@ -472,10 +470,7 @@
             <a href="#">Terms of Use</a> |
             <a href="#">Report Fraud</a>
         </p>
-        <p>24/7 Security Hotline: 01-700-ABC-BANK (01-700-222-2265) • Email: security@abcbank.ng</p>
-        <p style="font-size: 8px; margin-top: 5px; color: #ccc;">
-            This is a security awareness training exercise. This simulated phishing page is for educational purposes only.
-        </p>
+        <p>Customer Care: 0700-ABC-BANK (0700-222-2265) • Email: contact@abcbank.ng</p>
     </div>
     
     <script>
@@ -504,63 +499,15 @@
             alert("For USSD Banking, dial *894# from your registered mobile number.");
         }
         
-        function callCustomerCare() {
-            alert("Calling ABC Bank Security Team...\nEmergency Hotline: 01-700-222-2265\nPlease have your account number ready for verification.");
-        }
-        
-        function visitBranch() {
-            alert("Locate your nearest ABC Bank branch for immediate assistance. Visit our website for branch locator.");
-        }
-        
-        // Countdown timer for urgency
+        // Show last login info
         document.addEventListener('DOMContentLoaded', function() {
-            // Set countdown to 24 hours from now
-            const countdownElement = document.createElement('div');
-            countdownElement.className = 'security-alert';
-            countdownElement.style.marginTop = '10px';
-            countdownElement.innerHTML = `
-                <div class="security-alert-title" style="color: #dc3545;">
-                    ⏰ ACCOUNT VERIFICATION DEADLINE
-                </div>
-                <div class="security-alert-text" style="color: #dc3545;">
-                    Time remaining to verify: <span id="countdown" style="font-weight: bold;">23:59:59</span>
-                </div>
-            `;
-            
-            document.querySelector('.security-info').parentNode.insertBefore(countdownElement, document.querySelector('.security-info'));
-            
-            // Countdown timer
-            let timeLeft = 24 * 60 * 60; // 24 hours in seconds
-            
-            function updateCountdown() {
-                const hours = Math.floor(timeLeft / 3600);
-                const minutes = Math.floor((timeLeft % 3600) / 60);
-                const seconds = timeLeft % 60;
-                
-                document.getElementById('countdown').textContent = 
-                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                
-                if (timeLeft > 0) {
-                    timeLeft--;
-                    setTimeout(updateCountdown, 1000);
-                } else {
-                    document.getElementById('countdown').textContent = "TIME EXPIRED";
-                    document.getElementById('countdown').style.color = "#dc3545";
-                }
-            }
-            
-            updateCountdown();
-            
-            // Show last login info
             const lastLogin = new Date();
             const options = { hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Lagos' };
             const timeString = lastLogin.toLocaleTimeString('en-US', options);
             
             // Update last login time in the alert
             const alertTitle = document.querySelector('.security-alert-title');
-            if (alertTitle.textContent.includes("Last Login")) {
-                alertTitle.innerHTML = `🔐 Security Alert: Last Login ${timeString}, Lagos`;
-            }
+            alertTitle.innerHTML = `🔐 Security Alert: Last Login ${timeString}, Lagos`;
         });
     </script>
 </body>
